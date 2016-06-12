@@ -144,7 +144,12 @@ public abstract class Waiter implements Serializable {
             return this;
         }
 
-        public Waiter build() {return new Waiter(this);}
+        public Waiter build() {return new Waiter(this) {
+            @Override
+            public IBinder onBind(Intent intent) {
+                return null;
+            }
+        };}
 
 
     }

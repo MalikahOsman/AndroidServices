@@ -49,7 +49,7 @@ public class ActivateCashierServiceTest extends AndroidTestCase {
     };
 
     public void testActivateAccount() throws Exception {
-        String activate = activateService.activateChef("userCashier","cashier01","Lucy", "002", "Woodstock", "0214444444", employee );
+        String activate = activateService.activateCashier("userCashier","cashier01","Lucy", "002", "Woodstock", "0214444444", employee );
         Assert.assertEquals("ACTIVATED", activate);
 
     }

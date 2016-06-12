@@ -5,6 +5,7 @@ import java.io.Serializable;
 /**
  * Created by Osman on 2016-04-18.
  */
+
 public class Customer implements Serializable {
     private Long id;
     private String custName;
@@ -80,11 +81,20 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "Customer{" +
+        return String.format("Id : %d\nCustomer Name :%s\nCustomer Number :%s\nIdNum :%s",id,custName,custNum);
+                /*"Customer{" +
                 "custName='" + custName + '\'' +
                 ", custNum='" + custNum + '\'' +
-                '}';
+                '}';*/
     }
+
+
+    //public String toString()
+    //{
+      //  return String.format("Id : %d\nName :%s\nSurname :%s\nIdNum :%s",id,name,surName,idNo);
+    //}
+
+
 
     @Override
     public boolean equals(Object o) {
